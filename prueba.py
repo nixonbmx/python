@@ -1,66 +1,49 @@
-#ejercicio1
-nombre = input("entre su nombre : ")
-origen = int(input(f"{nombre} entre ciudad origen"))
-destino = int(input(f"{nombre} entre ciudad destino "))
+nombre = input("entre su nombre ")
+estadoCivil = int(input(f"{nombre} entre su estado civil "))
 edad = int(input(f"{nombre} entre su edad "))
+salario = int(input(f"{nombre} entre su salario "))
+if   estadoCivil == 1:
+    desc = "Soltero"
+    if edad < 30:
+        pau = 0.10
+    else:
+        pau = 0.12
 
-if origen == 5 or destino == 5:
-    costotiquete = 980000
-else: 
-    if origen== 1:
-        if destino == 2:
-            costotiquete = 200000
-            if edad < 60:
-                costotiquete = 210000
-        elif destino == 3:
-            costotiquete = 250000 - .1 * edad *1000
-        elif destino == 4:
-            costotiquete = 300000 + edad *1000
-    elif origen == 2:
-        if destino ==1:
-            if edad > 80:
-                costotiquete =0
-            else:
-                costotiquete = 200000
-        elif destino ==3:
-            costotiquete= 200000
-            if edad < 60:
-                diferencia = 60 - edad
-                if diferencia > 20:
-                    sobrecosto = 20000
-                else:
-                    sobrecosto= diferencia *1000
-                costotiquete = 200000 + sobrecosto
-        elif destino == 4:
-            costotiquete = 400000
-            if edad > 60:
-                costotiquete = 400000 + .05 * edad * 10000
-    elif origen == 3:
-        if destino  == 1:
-            costotiquete = 350000
-        elif destino == 2:
-            costotiquete = 280000
-            if edad > 60:
-                costotiquete = 300000
-        elif destino ==4:
-            costotiquete = 190000
-            if edad > 60:
-                costotiquete = 200000
-    elif origen == 4:
-        if destino == 1:
-            costotiquete = 500000
-            if edad < 10:
-                costotiquete = 250000
-        elif destino == 2:
-            costotiquete = 210000
-            if edad < 30:
-                costotiquete = 240000
-        elif destino == 3:
-            costotiquete = 350000
-            if edad > 60:
-                costotiquete = 350000 + (edad -60 ) * 10000
-print (nombre, " el costo  de su tiquete  es:", costotiquete) 
+elif estadoCivil == 2:
+    desc = "Casado"
+    if edad < 25:
+        pau = 0.12
+    else:
+        pau = 0.15
 
-        
+elif   estadoCivil == 3:
+    desc = "Separado"
+    if edad < 20:
+        pau = 0.08
+    else:
+        pau = 0.10
+
+elif    estadoCivil == 4:
+    desc = "Viudo"
+    if edad < 30:
+        pau = 0.15
+    else:
+        pau = 0.12
+
+elif    estadoCivil == 5:
+    desc = "Unión libre"
+    if salario < 1000:
+        pau = 0.20
+    else:
+        pau = 0.12
+
+else:
+    desc = "Estado civil inválido"
+    pau = 0.0
+
+aumento = salario * pau
+nuevoSalario = salario + aumento
+print(nombre, desc, "edad", edad, "salario", salario,"Porcentaje  de aumento", pau, "Aumento", end=": ")
+print(aumento, "Nuevo salario", nuevoSalario)  
 
 
