@@ -217,3 +217,53 @@ for i in range(n,0, -1):
     print("")
     
 
+
+
+#
+for i in range(1, 101, 1):
+
+            print(i)
+
+#
+
+for i in range(1, 101):
+
+            print(i)
+
+#
+for i in range(1, 100, 2):
+
+            print(i)
+
+#
+
+for i in range(1, 101, 2):
+
+            print(i)
+
+#
+for i in range(100, 0, -1):
+
+            print(i)
+
+#
+
+
+inicio = int(input("Entre un entero "))
+fin = int(input("Entre otro entero "))
+variacion = int(input("Entre un tercer entero "))
+for i in range(inicio, fin, variacion):
+        print(i)
+
+
+
+
+#
+
+n = int(input("entre un entero "))
+
+for x in range(1, n + 1):
+    for i in range(1, 11):
+        r = i * x
+        print(x, "*", i, "=", r)
+
