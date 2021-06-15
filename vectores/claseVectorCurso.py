@@ -1,4 +1,4 @@
-import random
+"""import random
 
 class vector:
 
@@ -18,7 +18,7 @@ class vector:
     def tamaño(self):
         return self.n
 
-    def imprimeVector(self,mensaje="vector sin nombre: \t"):
+   # def imprimeVector(self,mensaje="vector sin nombre: \t"):
         print("\n", mensaje, end=" ")
         for i in range (1, self.V[0]+1):
             print(self.V[i], end=",")
@@ -99,11 +99,11 @@ class vector:
         if i != -1:
             self.borrarDatoEnposicion(i)
 
-
+"""
 ######
 
-from claseVectorCurso  import vector
-import random
+#from claseVectorCurso  import vector
+#import random
 
 n=int(input("Entre el tamaño  del vector:  "))
 vec1 = vector(n)
@@ -121,3 +121,39 @@ s = vec1.sumarDatos()
 print("la suma de los datos es: ", s)
 vec1.intercambiar(1,vec1.V[0])
 vec1.imprimeVector("vector  de prueba uno  con datos intercambiados")
+
+#############################################
+
+tpmed = 0
+tpbello = 0
+tpenvi = 0
+mpio= int(input("ingrese mpio: "))
+while mpio != 0:
+    np = int(input("ingrese np: "))
+    if mpio == 1:
+        tpmed = tpmed + np
+    elif mpio == 2:
+        tpbello = tpbello + np
+    elif mpio == 3:
+        tpenvi = tpenvi + np
+    else:
+        print("codigo errado")
+    mpio= int(input("ingrese mpio: "))
+print("medellin",tpmed,"bello", tpbello,"envigado ", tpenvi)
+
+###############################################
+
+n= 10
+nomMpio = ["", "medellin","bello", "envigado","sabaneta","itagui","rionegro","la ceja","entrerios","andes","abejorral"]
+acmpio = [0] * (n+1)
+mpio = int(input("entre codigo de municipio"))
+while mpio != 0:
+    np = int(input("entre numero de personas"))
+    acmpio[mpio] = acmpio[mpio] + np
+    mpio = int(input("entre codigo  de municipio"))
+for i in range (1, n+1):
+    print("municipio", nomMpio[i], "habitantes", acmpio[i])
+
+
+##################################################
+

@@ -69,3 +69,15 @@ print("el primer digito de", b, "es", db)
 ########################################################
 
 
+x= int(input("entre un numero "))
+y= int(input("entre otro numero"))
+z=x%y
+print(x,y,end=":",sep=",")
+xx=x
+yy=y
+while z!=0:
+    xx=yy
+    yy=z
+    z=xx%yy
+    bb=x*y//yy
+print(yy,bb,sep=",")
